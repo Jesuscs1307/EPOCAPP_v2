@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  /* Ensure touch zooming is enabled */
+  touch-action: manipulation;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 400px; /* Prevent images from becoming too large */
+  max-height: 300px; /* Limit height for consistency */
+  object-fit: contain; /* Show entire image without cropping */
+  border-radius: 5px;
+  cursor: zoom-in; /* Indicate image is zoomable */
+  /* Enable smooth scaling on tap/zoom */
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover, .gallery img:active {
+  transform: scale(1.2); /* Slight enlarge effect on tap/hover */
+}
